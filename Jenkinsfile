@@ -15,7 +15,7 @@ pipeline {
          {
            steps 
            {
-              sh "sudo cp /home/coreopt1/docker/var/www/html/index.html /var/www/html/"
+              sh "sudo cp /home/coreopt1/docker/www/html/index.html /var/www/html/"
            }
           }
           
