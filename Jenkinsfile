@@ -6,9 +6,9 @@ pipeline {
           steps {
               sh "sudo rm -rf /home/coreopt1/docker"
               sh "cd /home/coreopt1/"
-              sh "mkdir project"
+              sh "mkdir -p /home/coreopt1/project"
               sh "cd /home/coreopt1/project"
-              sh "git clone https://github.com/dockerpackt/docker.git ."
+              sh "git clone https://github.com/dockerpackt/docker.git /home/coreopt1/project"
                
                }
          }
