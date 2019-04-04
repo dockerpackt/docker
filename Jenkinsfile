@@ -5,8 +5,8 @@ pipeline {
         {
           steps {
           
-              sh "rm -rf /home/coreopt1/docker"
-              sh "git clone https://github.com/dockerpackt/docker.git"
+              sh "sudo rm -rf /home/coreopt1/docker"
+              sh "sudo git clone https://github.com/dockerpackt/docker.git"
                
                }
          }
@@ -15,7 +15,7 @@ pipeline {
          {
            steps 
            {
-              sh "cp /home/coreopt1/docker/var/www/html/index.html /var/www/html/"
+              sh "sudo cp /home/coreopt1/docker/var/www/html/index.html /var/www/html/"
            }
           }
           
@@ -23,8 +23,8 @@ pipeline {
           {
             steps
             {
-              sh "apt install apache2 -y"
-              sh "systemctl start apache2"
+              sh "sudo apt install apache2 -y"
+              sh "sudo systemctl start apache2"
             }
           }
           
@@ -33,7 +33,7 @@ pipeline {
           {
             steps
             {
-              sh "systemctl restart apache2"
+              sh "sudo systemctl restart apache2"
             }
           }
                
