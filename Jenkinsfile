@@ -4,7 +4,8 @@ pipeline {
         stage('clone the repo and removing the existing one')
         {
           steps {
-          
+              sh "sudo rm -rf /home/coreopt1/docker"
+              sh "cd /home/coreopt1/"
               sh "sudo git clone https://github.com/dockerpackt/docker.git"
                
                }
